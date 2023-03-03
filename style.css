@@ -1,0 +1,154 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+.calculator-container{
+    max-width: 750px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 15vh repeat(5, 13vh);
+    grid-template-areas: 
+        "input input input input"
+        "result result result result"
+        "clear brackets modulo divide"
+        "seven eight nine multiply"
+        "four five six subtraction"
+        "one two three addition"
+        "doubleZeros zero point equals";
+    gap: 0.5em;
+    margin: 0.5em auto;
+}
+
+
+.result-field{
+    border-radius: 3px;
+    border-bottom: 1px solid gray;
+    grid-area: result;
+    padding: 1em 1em;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: right;
+}
+.keypad-container{
+    grid-row: 3/ -1;
+    grid-column: 1/ -1;
+}
+.input-field{
+    padding: 0.5em 1em;
+    grid-area: input;
+    height: 100%;
+    line-height: 3;
+    font-size: 3rem;
+    font-weight: bold;
+    border-bottom: 1px solid gray;
+    text-align: right;
+}
+
+.clear-key{
+    grid-area: clear;
+}
+
+.brackets-key{
+    grid-area: brackets;
+}
+
+
+.modulo-key{
+    grid-area: modulo;
+}
+
+.divide-key{
+    grid-area: divide;
+}
+
+.seven-key{
+    grid-area: seven;
+}
+
+.eight-key{
+    grid-area: eight;
+}
+
+.nine-key{
+    grid-area: nine;
+}
+
+.multiply-key{
+    grid-area: multiply;
+}
+
+.four-key{
+    grid-area: four;
+}
+
+.five-key{
+    grid-area: five;
+}
+
+.six-key{
+    grid-area: six;
+}
+
+.subtraction-key{
+    grid-area: subtraction;
+}
+
+.one-key{
+    grid-area: one;
+}
+
+.two-key{
+    grid-area: two;
+}
+
+.three-key{
+    grid-area: three;
+}
+
+.addition-key{
+    grid-area: addition;
+}
+
+.double-zero-key{
+    grid-area: doubleZeros;
+}
+
+.zero-key{
+    grid-area: zero;
+}
+
+.point-key{
+    grid-area: point;
+}
+
+.equals-key{
+    grid-area: equals;
+}
+
+
+.key {
+    width: 85px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 219, 219);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.key:active{
+    background-color: #1f1b24;
+    border: 2px solid rgb(187, 159, 159);
+    color: whitesmoke;
+}
+
